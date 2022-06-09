@@ -1,13 +1,14 @@
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { TargetPaths } from './paths';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  url = 'http://localhost:8080';
+  url = new TargetPaths().backendUrl;
 
   constructor(private http: HttpClient) { }
 

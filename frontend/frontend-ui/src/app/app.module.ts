@@ -13,10 +13,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 
 import { AppComponent } from './app.component';
+import { MovementsComponent } from './movements/movements.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MovementsComponent
   ],
   imports: [
     BrowserModule,

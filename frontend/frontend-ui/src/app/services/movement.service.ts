@@ -1,14 +1,15 @@
-import { Movement } from './../model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { TargetPaths } from './paths';
+import { Movement } from '../model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovementService {
 
-  url = 'http://localhost:8080';
+  url = new TargetPaths().backendUrl;
 
   constructor(private http: HttpClient) { }
 
